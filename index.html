@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peazy · Pricing made easy</title>
+<meta name="description" content="Peazy runs your whole price-to-quote flow, from price master data to the signed quote. Quote faster, see your odds of winning before you send, and land every deal inside the margin you planned.">
+<meta property="og:title" content="Peazy · Pricing made easy">
+<meta property="og:description" content="Price every deal to win, and to make money.">
+<link rel="icon" type="image/svg+xml" href="peazy-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&amp;family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+h1,h2,h3,p,ul{margin:0}
+a{color:#5444AC}a:hover{color:#32286B}
+a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
+@media (max-width: 820px){.pz-navlinks{display:none !important}}
+</style>
+<style>html{scroll-behavior:smooth}@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}</style>
+</head>
+<body>
+<div style="font-family: Geist, system-ui, -apple-system, 'Segoe UI', sans-serif; color: #1C1930; background: #FFFFFF; min-width: 0; overflow-x: hidden;">
+
+<!-- shared hand-drawn wobble filter -->
+<svg width="0" height="0" style="position: absolute;" aria-hidden="true" focusable="false"><defs><filter id="pz-wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs></svg>
+
+<!-- NAV -->
+<header style="border-bottom: 1px solid #E2E0EA; background: #FFFFFF;">
+<nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 18px clamp(20px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+<a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #23194A;">
+<img src="peazy-mark.svg" alt="" style="height: 44px; width: auto; display: block;">
+<span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 38px; line-height: 1; color: #23194A;">peazy</span>
+</a>
+<div class="pz-navlinks" style="display: flex; align-items: center; gap: 32px; font-size: 15px; font-weight: 500;">
+<a href="#value" style="color: #33304A; text-decoration: none;">Value</a>
+<a href="#how" style="color: #33304A; text-decoration: none;">How it works</a>
+<a href="#who" style="color: #33304A; text-decoration: none;">Who it's for</a>
+<a href="#results" style="color: #33304A; text-decoration: none;">Results</a>
+</div>
+<a href="#calculator" class="pz-open-calc" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #23194A; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none;">Calculate your upside</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="top" style="position: relative; background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(48px, 7vw, 96px) clamp(20px, 4vw, 48px) clamp(56px, 7vw, 104px); display: flex; flex-wrap: wrap; align-items: center; gap: 56px;">
+
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 28px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 28px; line-height: 1; color: #4A6B1F; transform: rotate(-2deg); transform-origin: left center;">pricing made easy</p>
+<h1 style="font-size: clamp(40px, 5.2vw, 68px); line-height: 1.04; font-weight: 600; letter-spacing: -0.025em; color: #23194A;">Price every deal to win, and to <span style="position: relative; display: inline-block; isolation: isolate; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-weight: 400; font-size: 1.22em; letter-spacing: 0; line-height: 0.9; padding: 0 6px;">make money.<svg viewBox="0 0 200 44" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -4px; right: -6px; bottom: 0.02em; width: calc(100% + 10px); height: 0.62em; z-index: -1; filter: url(#pz-wobble);"><path d="M4 16 C 40 8, 120 5, 196 10 C 199 20, 197 30, 194 37 C 130 41, 60 43, 6 39 C 2 31, 1 24, 4 16 Z" fill="#F6D140"></path></svg></span></h1>
+<p style="font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; color: #4F4A66; max-width: 540px;">Peazy runs your whole price-to-quote flow, from price master data to the signed quote. Your team quotes faster, sees its odds of winning before it sends, and every deal lands inside the margin you planned.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px;">
+<a href="#calculator" class="pz-open-calc" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 12px 14px 11px 15px; background: #F6D140; color: #23194A; font-size: 17px; font-weight: 600; text-decoration: none; box-shadow: 3px 4px 0 #23194A; border: 2px solid #23194A;">Calculate what Peazy could mean for you</a>
+<a href="#value" style="position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 17px; font-weight: 600; color: #5444AC; text-decoration: none;">See the value we bring<svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true"><path d="M1 7 H15 M10 2 L16 7 L10 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+</div>
+<div style="display: flex; align-items: flex-end; gap: 6px; margin-top: 4px;">
+<svg width="64" height="40" viewBox="0 0 64 40" aria-hidden="true" style="filter: url(#pz-wobble); flex: none;"><path d="M58 6 C 40 4, 18 10, 10 30 M4 22 L10 32 L20 26" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; line-height: 1.1; color: #23194A; transform: rotate(-1.5deg);">built by pricing people, for pricing people</p>
+</div>
+</div>
+
+<!-- Hero quote mock -->
+<div style="flex: 1 1 440px; min-width: 0; position: relative; padding: 28px 8px 48px 0;">
+<div style="position: absolute; top: 0; right: 4%; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; color: #23194A; transform: rotate(3deg); display: flex; align-items: center; gap: 4px; z-index: 2;">every line above floor<svg width="44" height="40" viewBox="0 0 44 40" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M4 6 C 22 4, 34 14, 36 34 M28 28 L36 36 L42 26" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+
+<div style="background: #FFFFFF; border: 2px solid #23194A; border-radius: 16px 20px 14px 18px; box-shadow: 8px 10px 0 #F6D140; overflow: hidden; transform: rotate(-0.6deg); margin-top: 28px;">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #E2E0EA; background: #F7F7FA; flex-wrap: wrap;">
+<div style="display: flex; flex-direction: column; gap: 2px;">
+<span style="font-size: 14px; font-weight: 600; color: #1C1930;">Quote Q-2027-0142</span>
+<span style="font-size: 12px; color: #6B6782;">Northwind Industrial · EU price list 2027</span>
+</div>
+<span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 4px; background: #DDF4EF; color: #0B6E5F; font-size: 12px; font-weight: 600;"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.5 L5 9 L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>Ready to send</span>
+</div>
+<div style="overflow-x: auto;">
+<table style="width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; min-width: 420px;">
+<thead>
+<tr style="text-align: left; color: #4F4A66; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
+<th style="padding: 10px 18px; font-weight: 600; border-bottom: 1px solid #E2E0EA;">Item</th>
+<th style="padding: 10px 8px; font-weight: 600; border-bottom: 1px solid #E2E0EA; text-align: right;">Qty</th>
+<th style="padding: 10px 8px; font-weight: 600; border-bottom: 1px solid #E2E0EA; text-align: right;">Net price</th>
+<th style="padding: 10px 18px; font-weight: 600; border-bottom: 1px solid #E2E0EA; text-align: right;">Margin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 11px 18px; border-bottom: 1px solid #EFEEF4;"><span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #6B6782;">HX-4420</span><br><span style="color: #1C1930;">Hydraulic coupling 3/4"</span></td>
+<td style="padding: 11px 8px; border-bottom: 1px solid #EFEEF4; text-align: right;">120</td>
+<td style="padding: 11px 8px; border-bottom: 1px solid #EFEEF4; text-align: right;">€18.40</td>
+<td style="padding: 11px 18px; border-bottom: 1px solid #EFEEF4; text-align: right;"><span style="display: inline-flex; align-items: center; gap: 5px; color: #0B6E5F; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #0B6E5F;"></span>34.2%</span></td>
+</tr>
+<tr>
+<td style="padding: 11px 18px; border-bottom: 1px solid #EFEEF4;"><span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #6B6782;">VL-1180</span><br><span style="color: #1C1930;">Ball valve DN25</span></td>
+<td style="padding: 11px 8px; border-bottom: 1px solid #EFEEF4; text-align: right;">60</td>
+<td style="padding: 11px 8px; border-bottom: 1px solid #EFEEF4; text-align: right;">€42.10</td>
+<td style="padding: 11px 18px; border-bottom: 1px solid #EFEEF4; text-align: right;"><span style="display: inline-flex; align-items: center; gap: 5px; color: #0B6E5F; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #0B6E5F;"></span>28.9%</span></td>
+</tr>
+<tr style="background: #FFF4C2;">
+<td style="padding: 11px 18px; border-bottom: 1px solid #EFEEF4;"><span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #4F4A66;">PM-0907</span><br><span style="color: #1C1930;">Gear pump 12cc</span><br><span style="display: inline-block; margin-top: 4px; padding: 1px 6px; border-radius: 3px; background: #EAF3DC; color: #4A6B1F; font-size: 11px; font-weight: 600;">Suggested</span></td>
+<td style="padding: 11px 8px; border-bottom: 1px solid #EFEEF4; text-align: right;">8</td>
+<td style="padding: 11px 8px; border-bottom: 1px solid #EFEEF4; text-align: right;"><span style="font-weight: 600;">€648.00</span><br><span style="font-size: 11px; color: #1F55C2; font-weight: 600;">▲ +5.9%</span></td>
+<td style="padding: 11px 18px; border-bottom: 1px solid #EFEEF4; text-align: right;"><span style="display: inline-flex; align-items: center; gap: 5px; color: #0B6E5F; font-weight: 600;"><span style="width: 7px; height: 7px; border-radius: 50%; background: #0B6E5F;"></span>26.1%</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 18px; flex-wrap: wrap;">
+<div style="display: flex; flex-direction: column; gap: 2px; font-variant-numeric: tabular-nums;">
+<span style="font-size: 12px; color: #6B6782;">Quote total</span>
+<span style="font-size: 20px; font-weight: 600; color: #1C1930;">€9,918.00</span>
+</div>
+<span style="display: inline-flex; align-items: center; height: 36px; padding: 0 16px; border-radius: 6px; background: #F6D140; color: #23194A; font-size: 14px; font-weight: 600;">Send quote</span>
+</div>
+</div>
+
+<div style="position: absolute; left: -8px; bottom: 0; display: flex; align-items: center; gap: 6px; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 26px; color: #23194A; transform: rotate(-3deg);"><svg width="50" height="44" viewBox="0 0 50 44" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M6 38 C 10 20, 26 10, 44 8 M34 2 L45 8 L36 16" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>€288 of margin, found</div>
+</div>
+
+</div>
+</section>
+
+<!-- VALUE -->
+<section id="value" style="background: #F7F7FA; border-top: 1px solid #E2E0EA;">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 56px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 28px; line-height: 1; color: #4A6B1F; transform: rotate(-1.5deg); transform-origin: left center;">the value we bring</p>
+<h2 style="font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #23194A;">Three outcomes your P&amp;L will <span style="position: relative; display: inline-block; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-weight: 400; font-size: 1.2em; letter-spacing: 0;">notice<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: 0; bottom: -0.12em; width: 100%; height: 0.32em; filter: url(#pz-wobble);"><path d="M3 12 C 30 4, 52 17, 82 9 S 132 3, 162 10 S 190 13, 197 7" fill="none" stroke="#23194A" stroke-width="4" stroke-linecap="round"></path></svg></span></h2>
+<p style="font-size: 18px; line-height: 1.6; color: #4F4A66;">Quoting is where pricing strategy meets reality. Peazy makes sure what you planned is what you invoice.</p>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 32px;">
+
+<article style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 2px solid #23194A; border-radius: 18px 14px 20px 12px; box-shadow: 6px 7px 0 #F6D140; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px; transform: rotate(-0.5deg);">
+<div style="position: relative; width: 72px; height: 60px; display: flex; align-items: center; justify-content: center;">
+<svg viewBox="0 0 120 90" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; filter: url(#pz-wobble);"><path d="M64 8 C 100 4, 116 26, 110 50 C 104 74, 66 84, 36 76 C 10 68, 2 44, 12 26 C 22 10, 50 4, 78 12" fill="none" stroke="#23194A" stroke-width="3.5" stroke-linecap="round"></path></svg>
+<span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 40px; line-height: 1; color: #23194A;">1</span>
+</div>
+<h3 style="font-size: 24px; line-height: 1.2; font-weight: 600; color: #23194A; letter-spacing: -0.01em;">Optimize revenue &amp; profitability</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Price to value, not to habit. Peazy recommends the right price per customer, segment and volume, so you stop leaving money on the table.</p>
+<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.45; color: #1C1930;">
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Value-based price recommendations on every line</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Price lists that stay current across channels</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Margin visible before the quote goes out</li>
+</ul>
+</article>
+
+<article style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 2px solid #23194A; border-radius: 14px 20px 12px 18px; box-shadow: 6px 7px 0 #F6D140; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px; transform: rotate(0.4deg);">
+<div style="position: relative; width: 72px; height: 60px; display: flex; align-items: center; justify-content: center;">
+<svg viewBox="0 0 120 90" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; filter: url(#pz-wobble);"><path d="M58 6 C 96 2, 118 24, 112 48 C 106 72, 70 86, 38 78 C 8 70, 2 46, 10 28 C 20 10, 46 2, 76 10" fill="none" stroke="#23194A" stroke-width="3.5" stroke-linecap="round"></path></svg>
+<span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 40px; line-height: 1; color: #23194A;">2</span>
+</div>
+<h3 style="font-size: 24px; line-height: 1.2; font-weight: 600; color: #23194A; letter-spacing: -0.01em;">Stabilize margins</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Discounts with guardrails. Floors, approval rules and cost changes flow straight into every quote, so margin doesn't erode deal by deal.</p>
+<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.45; color: #1C1930;">
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Margin floors per product and customer tier</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Approvals only when a deal really needs one</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Cost increases reach your prices, not your margin</li>
+</ul>
+</article>
+
+<article style="flex: 1 1 300px; min-width: 0; background: #FFFFFF; border: 2px solid #23194A; border-radius: 20px 12px 18px 14px; box-shadow: 6px 7px 0 #F6D140; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px; transform: rotate(-0.3deg);">
+<div style="position: relative; width: 72px; height: 60px; display: flex; align-items: center; justify-content: center;">
+<svg viewBox="0 0 120 90" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; filter: url(#pz-wobble);"><path d="M62 10 C 98 6, 114 28, 108 52 C 102 74, 64 82, 34 74 C 8 66, 4 42, 14 24 C 24 8, 52 2, 80 12" fill="none" stroke="#23194A" stroke-width="3.5" stroke-linecap="round"></path></svg>
+<span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 40px; line-height: 1; color: #23194A;">3</span>
+</div>
+<h3 style="font-size: 24px; line-height: 1.2; font-weight: 600; color: #23194A; letter-spacing: -0.01em;">Improve sales efficiency</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">From request to signed quote without the spreadsheet relay. Reps build accurate quotes fast and spend their time selling, not chasing prices.</p>
+<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.45; color: #1C1930;">
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Guided quoting with the right price already in</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Fewer back-and-forths with pricing and finance</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Every quote, version and signature in one place</li>
+</ul>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- DEAL SUCCESS PROJECTIONS -->
+<section id="projections" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; gap: 56px;">
+
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 28px; line-height: 1; color: #4A6B1F; transform: rotate(-1.5deg); transform-origin: left center;">know your odds before you send</p>
+<h2 style="font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #23194A;">Deal success projections: win the deal <span style="position: relative; display: inline-block; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-weight: 400; font-size: 1.2em; letter-spacing: 0;">and<svg viewBox="0 0 120 72" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -18%; top: -22%; width: 136%; height: 144%; filter: url(#pz-wobble);"><path d="M60 6 C 100 2, 116 22, 112 40 C 108 60, 70 70, 40 64 C 10 58, 2 36, 10 20 C 18 6, 44 2, 74 10" fill="none" stroke="#23194A" stroke-width="3" stroke-linecap="round"></path></svg></span> the margin</h2>
+<p style="font-size: 18px; line-height: 1.6; color: #4F4A66;">Peazy projects the chance of winning every quote, based on your own deal history, the customer and the segment. Move the price and watch your odds and your margin move with it, so you find the price that wins without giving margin away.</p>
+<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 16px; line-height: 1.45; color: #1C1930;">
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>A win probability on every quote, before it goes out</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>The price-to-win sweet spot for each deal</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Know when a discount really buys the deal, and when it only costs margin</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Focus your team on the deals most likely to close</li>
+</ul>
+</div>
+
+<div style="flex: 1 1 460px; min-width: 0; position: relative; padding-bottom: 40px;">
+<div style="background: #FFFFFF; border: 2px solid #23194A; border-radius: 18px 14px 20px 16px; box-shadow: 8px 10px 0 #F6D140; overflow: hidden; transform: rotate(0.5deg);">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #E2E0EA; background: #F7F7FA; flex-wrap: wrap;">
+<div style="display: flex; flex-direction: column; gap: 2px;">
+<span style="font-size: 14px; font-weight: 600; color: #1C1930;">Deal projection · Q-2027-0142</span>
+<span style="font-size: 12px; color: #6B6782;">Based on 214 similar deals in this segment</span>
+</div>
+<span style="display: inline-block; padding: 2px 8px; border-radius: 3px; background: #EAF3DC; color: #4A6B1F; font-size: 12px; font-weight: 600;">Suggested price</span>
+</div>
+<div style="padding: 16px 18px 6px;">
+<svg viewBox="0 0 480 260" role="img" aria-label="Win probability falls as price rises, while expected margin peaks at the suggested price" style="display: block; width: 100%; height: auto;">
+<rect x="246" y="16" width="48" height="210" rx="8" fill="#FFF4C2"></rect>
+<line x1="40" y1="226" x2="464" y2="226" stroke="#CCC9D8" stroke-width="1"></line>
+<line x1="40" y1="16" x2="40" y2="226" stroke="#CCC9D8" stroke-width="1"></line>
+<path d="M44 40 C 160 44, 220 92, 262 132 S 384 206, 460 212" fill="none" stroke="#5444AC" stroke-width="3.5" stroke-linecap="round" style="filter: url(#pz-wobble);"></path>
+<path d="M44 206 C 124 158, 204 70, 270 64 S 402 142, 460 196" fill="none" stroke="#23194A" stroke-width="3" stroke-dasharray="8 7" stroke-linecap="round" style="filter: url(#pz-wobble);"></path>
+<circle cx="270" cy="64" r="7" fill="#F6D140" stroke="#23194A" stroke-width="2.5"></circle>
+<circle cx="270" cy="139" r="6" fill="#FFFFFF" stroke="#5444AC" stroke-width="2.5"></circle>
+<text x="52" y="30" font-family="Geist, system-ui, sans-serif" font-size="13" font-weight="600" fill="#5444AC">Win probability</text>
+<text x="300" y="52" font-family="Geist, system-ui, sans-serif" font-size="13" font-weight="600" fill="#23194A">Expected margin</text>
+<text x="40" y="248" font-family="Geist, system-ui, sans-serif" font-size="12" fill="#6B6782">Lower price</text>
+<text x="464" y="248" text-anchor="end" font-family="Geist, system-ui, sans-serif" font-size="12" fill="#6B6782">Higher price</text>
+</svg>
+</div>
+<div style="display: flex; flex-wrap: wrap; border-top: 1px solid #E2E0EA; font-variant-numeric: tabular-nums;">
+<div style="flex: 1 1 120px; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px; border-right: 1px solid #E2E0EA;">
+<span style="font-size: 12px; color: #6B6782;">Win probability</span>
+<span style="font-size: 20px; font-weight: 600; color: #1C1930;">62%</span>
+</div>
+<div style="flex: 1 1 120px; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px; border-right: 1px solid #E2E0EA;">
+<span style="font-size: 12px; color: #6B6782;">Deal margin</span>
+<span style="font-size: 20px; font-weight: 600; color: #0B6E5F;">29.8%</span>
+</div>
+<div style="flex: 1 1 120px; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px;">
+<span style="font-size: 12px; color: #6B6782;">vs. rep's first draft</span>
+<span style="font-size: 20px; font-weight: 600; color: #1F55C2;">▲ +3.4 pts</span>
+</div>
+</div>
+</div>
+<div style="position: absolute; right: 2%; bottom: 0; display: flex; align-items: center; gap: 6px; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 26px; color: #23194A; transform: rotate(-2.5deg);"><svg width="48" height="40" viewBox="0 0 48 40" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M42 36 C 36 22, 22 12, 6 8 M16 2 L5 8 L13 17" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>the sweet spot: win it, keep the margin</div>
+</div>
+
+</div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 28px; line-height: 1; color: #4A6B1F; transform: rotate(-1.5deg); transform-origin: left center;">sound familiar?</p>
+<h2 style="font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #23194A;">Where revenue quietly leaks today</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: stretch;">
+
+<div style="flex: 1 1 380px; min-width: 0; padding: 36px 32px; border: 2px dashed #A7A3B8; border-radius: 18px; display: flex; flex-direction: column; gap: 20px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 36px; line-height: 1; color: #4F4A66;">Without Peazy</p>
+<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; font-size: 18px; line-height: 1.4; color: #4F4A66;">
+<li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Prices live in five different spreadsheets</li>
+<li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Discounts depend on who negotiates hardest</li>
+<li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Margin shows up after the deal is signed</li>
+<li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Quotes wait days in someone's inbox for approval</li>
+<li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Cost increases never make it to the price list</li>
+<li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">You learn the price was wrong when the deal is lost</li>
+</ul>
+</div>
+
+<div style="flex: 1 1 380px; min-width: 0; padding: 36px 32px; background: #23194A; border-radius: 14px 20px 16px 18px; box-shadow: 6px 7px 0 #F6D140; display: flex; flex-direction: column; gap: 20px; color: #FFFFFF;">
+<div style="display: flex; align-items: center; gap: 12px;">
+<img src="peazy-mark-reversed.svg" alt="" style="height: 40px; width: auto; display: block;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 36px; line-height: 1; color: #F6D140;">With Peazy</p>
+</div>
+<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; font-size: 18px; line-height: 1.4; color: #FFFFFF;">
+<li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>One price master, always current</li>
+<li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Discount rules everyone can see and trust</li>
+<li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Margin on every line, before you hit send</li>
+<li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Approvals routed automatically, only when they matter</li>
+<li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Cost changes flow to price in a single step</li>
+<li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Win odds and margin side by side, before you send</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background: #F7F7FA; border-top: 1px solid #E2E0EA;">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 56px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 28px; line-height: 1; color: #4A6B1F; transform: rotate(-1.5deg); transform-origin: left center;">how it works</p>
+<h2 style="font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #23194A;">From price list to signed quote, in one flow</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px;">
+
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+<div style="position: relative; width: 84px; height: 72px; display: flex; align-items: center; justify-content: center; isolation: isolate;">
+<svg viewBox="0 0 100 86" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; filter: url(#pz-wobble);"><path d="M50 6 C 80 4, 96 24, 92 48 C 88 72, 60 82, 36 78 C 12 74, 4 52, 8 34 C 12 16, 28 8, 50 6 Z" fill="#F6D140"></path></svg>
+<span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 52px; line-height: 1; color: #23194A;">1</span>
+</div>
+<h3 style="font-size: 22px; line-height: 1.25; font-weight: 600; color: #23194A;">Bring your prices home</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Price master data, costs and customer agreements in one source of truth, instead of scattered files.</p>
+</div>
+
+<svg width="80" height="48" viewBox="0 0 80 48" aria-hidden="true" style="flex: 0 0 80px; margin-top: 18px; filter: url(#pz-wobble);"><path d="M4 30 C 22 8, 50 6, 72 24 M62 14 L73 25 L59 30" fill="none" stroke="#23194A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+<div style="position: relative; width: 84px; height: 72px; display: flex; align-items: center; justify-content: center; isolation: isolate;">
+<svg viewBox="0 0 100 86" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; filter: url(#pz-wobble);"><path d="M46 4 C 78 6, 98 26, 92 50 C 86 74, 56 84, 32 76 C 10 68, 2 48, 10 30 C 16 14, 30 4, 46 4 Z" fill="#F6D140"></path></svg>
+<span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 52px; line-height: 1; color: #23194A;">2</span>
+</div>
+<h3 style="font-size: 22px; line-height: 1.25; font-weight: 600; color: #23194A;">Set the guardrails</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Define pricing rules, margin floors and approval thresholds once. Peazy applies them to every quote, every time.</p>
+</div>
+
+<svg width="80" height="48" viewBox="0 0 80 48" aria-hidden="true" style="flex: 0 0 80px; margin-top: 18px; filter: url(#pz-wobble);"><path d="M4 18 C 24 40, 52 40, 72 20 M58 18 L72 19 L70 33" fill="none" stroke="#23194A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+<div style="position: relative; width: 84px; height: 72px; display: flex; align-items: center; justify-content: center; isolation: isolate;">
+<svg viewBox="0 0 100 86" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; filter: url(#pz-wobble);"><path d="M54 8 C 84 8, 96 30, 90 52 C 84 74, 54 82, 30 74 C 8 66, 4 44, 12 28 C 20 12, 34 8, 54 8 Z" fill="#F6D140"></path></svg>
+<span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 52px; line-height: 1; color: #23194A;">3</span>
+</div>
+<h3 style="font-size: 22px; line-height: 1.25; font-weight: 600; color: #23194A;">Quote and close</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Reps build quotes with the right price built in, send them out and get them signed, while you see margin in real time.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- RESULTS -->
+<section id="results" style="background: #23194A; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 28px; line-height: 1; color: #F6D140; transform: rotate(-1.5deg); transform-origin: left center;">what it adds up to</p>
+<h2 style="font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF;">Built to move the numbers that matter</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px;">
+<div style="flex: 1 1 240px; min-width: 0; padding: 28px 28px 32px; border: 1.5px solid #4A3F86; border-radius: 16px 12px 18px 14px; display: flex; flex-direction: column; gap: 8px;"><span style="font-family: &quot;Caveat Brush&quot;, &quot;Segoe Print&quot;, cursive; font-size: 72px; line-height: 1; color: rgb(246, 209, 64)">2 to 5 pts</span><span style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255)">Gross margin</span><span style="font-size: 15px; line-height: 1.5; color: rgb(201, 193, 240)">From value-based prices and fewer off-policy discounts.</span></div>
+<div style="flex: 1 1 240px; min-width: 0; padding: 28px 28px 32px; border: 1.5px solid #4A3F86; border-radius: 12px 18px 14px 16px; display: flex; flex-direction: column; gap: 8px;"><span style="font-family: &quot;Caveat Brush&quot;, &quot;Segoe Print&quot;, cursive; font-size: 72px; line-height: 1; color: rgb(246, 209, 64)">50%</span><span style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255)">Less margin variance</span><span style="font-size: 15px; line-height: 1.5; color: rgb(201, 193, 240)">Floors and approvals keep deal margins inside a tight band.</span></div>
+<div style="flex: 1 1 240px; min-width: 0; padding: 28px 28px 32px; border: 1.5px solid #4A3F86; border-radius: 18px 14px 12px 16px; display: flex; flex-direction: column; gap: 8px;"><span style="font-family: &quot;Caveat Brush&quot;, &quot;Segoe Print&quot;, cursive; font-size: 72px; line-height: 1; color: rgb(246, 209, 64)">Up to 5×</span><span style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255)">Faster quote turnaround</span><span style="font-size: 15px; line-height: 1.5; color: rgb(201, 193, 240)">Request to signed quote, without the approval ping-pong.</span></div>
+</div>
+</div>
+</section>
+
+<!-- WHO -->
+<section id="who" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 28px; line-height: 1; color: #4A6B1F; transform: rotate(-1.5deg); transform-origin: left center;">who it's for</p>
+<h2 style="font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #23194A;">One flow, three teams who feel the difference</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 32px;">
+<div style="flex: 1 1 280px; min-width: 0; padding: 32px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
+<h3 style="font-size: 20px; font-weight: 600; color: #23194A;">Pricing managers</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Set the strategy once and watch it hold in every quote. No more policing spreadsheets.</p>
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; line-height: 1.15; color: #23194A; transform: rotate(-1.5deg); margin-top: 8px;">"my rules, finally applied"</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; padding: 32px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
+<h3 style="font-size: 20px; font-weight: 600; color: #23194A;">Sales reps</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Quote with confidence. The right price is already there, and you know when a discount needs a sign-off.</p>
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; line-height: 1.15; color: #23194A; transform: rotate(-1.5deg); margin-top: 8px;">"more selling, less chasing"</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; padding: 32px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
+<h3 style="font-size: 20px; font-weight: 600; color: #23194A;">Commercial leadership</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">See price realization and margin by segment, customer and rep, while there's still time to act.</p>
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; line-height: 1.15; color: #23194A; transform: rotate(-1.5deg); margin-top: 8px;">"no more margin surprises"</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="demo" style="background: #FFFBE8; border-top: 1px solid #FCE88A;">
+<div style="max-width: 900px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px;">
+<img src="peazy-mark.svg" alt="" style="height: 72px; width: auto; display: block; transform: rotate(-8deg);">
+<h2 style="font-size: clamp(34px, 4.4vw, 56px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #23194A;">Ready to make pricing <span style="position: relative; display: inline-block; isolation: isolate; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-weight: 400; font-size: 1.18em; letter-spacing: 0; padding: 0 6px;">easy peazy?<svg viewBox="0 0 200 44" preserveAspectRatio="none" aria-hidden="true" style="position: absolute; left: -4px; bottom: 0.04em; width: calc(100% + 10px); height: 0.6em; z-index: -1; filter: url(#pz-wobble);"><path d="M4 16 C 40 8, 120 5, 196 10 C 199 20, 197 30, 194 37 C 130 41, 60 43, 6 39 C 2 31, 1 24, 4 16 Z" fill="#F6D140"></path></svg></span></h2>
+<p style="font-size: 19px; line-height: 1.55; color: #4F4A66; max-width: 600px;">See what better pricing is worth to your business in under a minute. Then let's walk through your quoting process together and find where margin slips away.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 16px 28px; margin-top: 8px;">
+<a href="#calculator" class="pz-open-calc" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 32px; border-radius: 12px 14px 11px 15px; background: #F6D140; color: #23194A; font-size: 18px; font-weight: 600; text-decoration: none; box-shadow: 3px 4px 0 #23194A; border: 2px solid #23194A;">Calculate what Peazy could mean for you</a>
+<span style="font-size: 16px; color: #4F4A66;">or write to <a href="mailto:timo@peazypricing.com" style="color: #5444AC; font-weight: 600;">timo@peazypricing.com</a></span>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #23194A; color: #C9C1F0;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 48px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px;">
+<div style="display: flex; align-items: center; gap: 20px;">
+<img src="peazy-lockup-reversed.svg" alt="Peazy" style="height: 96px; width: auto; display: block;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 26px; line-height: 1.1; color: #F6D140; max-width: 220px;">pricing made easy</p>
+</div>
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 15px;">
+<a href="#value" style="color: #C9C1F0; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center;">Value</a>
+<a href="#how" style="color: #C9C1F0; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center;">How it works</a>
+<a href="#who" style="color: #C9C1F0; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center;">Who it's for</a>
+<a href="#demo" style="color: #C9C1F0; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center;">Contact</a>
+</nav>
+<p style="font-size: 13px; color: #9D93D4; flex-basis: 100%;">© 2026 Peazy. All rights reserved.</p>
+</div>
+</footer>
+
+</div>
+<!-- UPSIDE CALCULATOR -->
+<dialog id="pz-calc" aria-labelledby="pz-calc-title" style="width: min(620px, calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 2px solid #23194A; border-radius: 18px 14px 20px 16px; box-shadow: 8px 10px 0 #F6D140; background: #FFFFFF; color: #1C1930; font-family: Geist, system-ui, -apple-system, 'Segoe UI', sans-serif; overflow: auto;">
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 24px 28px 18px; background: #FFFBE8; border-bottom: 1px solid #FCE88A;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; line-height: 1; color: #4A6B1F; transform: rotate(-2deg); transform-origin: left center;">your pricing upside</p>
+<h2 id="pz-calc-title" style="font-size: 28px; line-height: 1.15; font-weight: 600; letter-spacing: -0.02em; color: #23194A;">What could Peazy mean for you?</h2>
+</div>
+<button type="button" class="pz-calc-close" aria-label="Close" style="flex: none; width: 44px; height: 44px; border: 2px solid #23194A; border-radius: 12px 14px 11px 15px; background: #FFFFFF; color: #23194A; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3 L13 13 M13 3 L3 13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
+</div>
+
+<form id="pz-calc-form" novalidate style="padding: 24px 28px 28px; display: flex; flex-direction: column; gap: 20px;">
+<p class="pz-step-label" style="font-size: 13px; font-weight: 600; color: #4F4A66; text-transform: uppercase; letter-spacing: 0.05em;">Step <span id="pz-step-n">1</span> of 2</p>
+
+<!-- step 1 -->
+<div class="pz-step" data-step="1" style="display: flex; flex-direction: column; gap: 18px;">
+<p style="font-size: 16px; line-height: 1.55; color: #4F4A66;">Tell us about your business. We'll estimate the extra net sales that better pricing could bring you.</p>
+<div class="pz-field">
+<label for="pz-industry">Industry</label>
+<select id="pz-industry" name="Industry" required>
+<option value="">Choose your industry</option>
+<option>Building materials</option>
+<option>Industrial equipment &amp; components</option>
+<option>Chemicals &amp; plastics</option>
+<option>Food &amp; beverage ingredients</option>
+<option>Packaging</option>
+<option>Electrical &amp; electronics</option>
+<option>Automotive parts</option>
+<option>Wholesale &amp; distribution</option>
+<option>Other</option>
+</select>
+<p class="pz-err" id="pz-industry-err" hidden>Choose your industry.</p>
+</div>
+<div class="pz-field">
+<label for="pz-revenue">Annual revenue, in € million</label>
+<div style="position: relative;">
+<span aria-hidden="true" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); font-weight: 600; color: #4F4A66;">€</span>
+<input id="pz-revenue" name="Revenue (EUR million)" type="number" inputmode="decimal" min="1" step="0.1" placeholder="e.g. 85" required aria-describedby="pz-revenue-hint" style="padding-left: 32px; padding-right: 52px;">
+<span aria-hidden="true" style="position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-weight: 600; color: #4F4A66;">M</span>
+</div>
+<p id="pz-revenue-hint" class="pz-hint">Your total yearly net sales. A rough number is fine.</p>
+<p class="pz-err" id="pz-revenue-err" hidden>Enter your annual revenue in € million, for example 85.</p>
+</div>
+<button type="button" id="pz-next" class="pz-btn-lemon">Next: where do we send it?</button>
+</div>
+
+<!-- step 2 -->
+<div class="pz-step" data-step="2" hidden style="display: flex; flex-direction: column; gap: 18px;">
+<p style="font-size: 16px; line-height: 1.55; color: #4F4A66;">Almost there. Your result appears right after this step, and we'll follow up with a short walkthrough.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+<div class="pz-field"><label for="pz-name">Full name</label><input id="pz-name" name="Name" autocomplete="name" required><p class="pz-err" hidden>Enter your name.</p></div>
+<div class="pz-field"><label for="pz-company">Company</label><input id="pz-company" name="Company" autocomplete="organization" required><p class="pz-err" hidden>Enter your company.</p></div>
+<div class="pz-field"><label for="pz-role">Job title</label><input id="pz-role" name="Job title" autocomplete="organization-title"></div>
+<div class="pz-field"><label for="pz-phone">Phone <span style="font-weight: 400; color: #6B6782;">(optional)</span></label><input id="pz-phone" name="Phone" type="tel" autocomplete="tel"></div>
+</div>
+<div class="pz-field"><label for="pz-email">Work email</label><input id="pz-email" name="email" type="email" autocomplete="email" required><p class="pz-err" hidden>Enter a valid email address.</p></div>
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px;">
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 14px; line-height: 1.45; color: #4F4A66; cursor: pointer;"><input id="pz-consent" type="checkbox" required style="width: 20px; height: 20px; margin: 1px 0 0; accent-color: #23194A; flex: none;"><span>Peazy may contact me about this estimate. My details are only used for that.</span></label>
+<p class="pz-err" id="pz-consent-err" hidden>Tick the box so we can send you your result.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+<button type="button" id="pz-back" class="pz-btn-secondary">Back</button>
+<button type="submit" id="pz-submit" class="pz-btn-lemon" style="flex: 1 1 auto;">Calculate my upside</button>
+</div>
+</div>
+
+<!-- result -->
+<div class="pz-step" data-step="3" hidden style="display: flex; flex-direction: column; gap: 20px;" aria-live="polite">
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<p style="font-size: 15px; font-weight: 600; color: #4F4A66;">Extra net sales per year with 2 to 5% better pricing</p>
+<p id="pz-res-range" style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: clamp(44px, 9vw, 64px); line-height: 1; color: #23194A;"></p>
+<p id="pz-res-basis" style="font-size: 15px; line-height: 1.5; color: #4F4A66;"></p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; font-variant-numeric: tabular-nums;">
+<div style="padding: 14px 16px; border: 1.5px solid #E2E0EA; border-radius: 14px 12px 16px 10px;"><p style="font-size: 13px; color: #4F4A66;">At 2%</p><p id="pz-res-low" style="font-size: 22px; font-weight: 600; color: #23194A;"></p></div>
+<div style="padding: 14px 16px; border: 1.5px solid #E2E0EA; border-radius: 12px 16px 10px 14px;"><p style="font-size: 13px; color: #4F4A66;">At 3.5%</p><p id="pz-res-mid" style="font-size: 22px; font-weight: 600; color: #23194A;"></p></div>
+<div style="padding: 14px 16px; border: 1.5px solid #E2E0EA; border-radius: 16px 10px 14px 12px;"><p style="font-size: 13px; color: #4F4A66;">At 5%</p><p id="pz-res-high" style="font-size: 22px; font-weight: 600; color: #23194A;"></p></div>
+</div>
+<div style="padding: 18px 20px; background: #23194A; color: #FFFFFF; border-radius: 14px 18px 12px 16px; box-shadow: 6px 7px 0 #F6D140; display: flex; flex-direction: column; gap: 8px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 26px; line-height: 1; color: #F6D140;">did you know?</p>
+<p style="font-size: 16px; line-height: 1.55;">A pure price increase typically flows straight through to EBITDA. You sell the same volume, so there's no extra material, production or freight cost. That means <strong id="pz-res-ebitda" style="color: #F6D140;"></strong> could land on your EBITDA line.</p>
+</div>
+<p style="font-size: 13px; line-height: 1.5; color: #6B6782;">Indicative estimate, assuming your volumes stay the same. Your actual upside depends on your price waterfall, discount discipline and customer mix.</p>
+<p id="pz-send-ok" hidden style="font-size: 15px; line-height: 1.5; color: #0B6E5F; font-weight: 600;">Thanks! We've received your details and will be in touch to walk you through it.</p>
+<p id="pz-send-err" hidden style="font-size: 15px; line-height: 1.5; color: #8C1230; font-weight: 600;">We couldn't send your details just now. Please email <a href="mailto:timo@peazypricing.com">timo@peazypricing.com</a> and we'll follow up.</p>
+<button type="button" class="pz-calc-close pz-btn-secondary">Close</button>
+</div>
+</form>
+</dialog>
+
+<style>
+#pz-calc::backdrop{background:rgba(35,25,74,.55)}
+#pz-calc h2,#pz-calc p{margin:0}
+.pz-field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.pz-field label{font-size:14px;font-weight:600;color:#1C1930}
+.pz-field input,.pz-field select{box-sizing:border-box;width:100%;height:48px;padding:0 14px;border:1.5px solid #8A86A0;border-radius:10px;background:#FFFFFF;font:inherit;font-size:16px;color:#1C1930}
+.pz-field input:focus-visible,.pz-field select:focus-visible,#pz-calc button:focus-visible,#pz-consent:focus-visible{outline:2px solid #6C5BC7;outline-offset:2px}
+.pz-field input[aria-invalid="true"],.pz-field select[aria-invalid="true"]{border:2px solid #B4183E;background:#FDE4EA}
+.pz-hint{font-size:13px;color:#6B6782}
+.pz-err{font-size:13px;font-weight:600;color:#8C1230}
+.pz-btn-lemon{min-height:52px;padding:0 24px;border:2px solid #23194A;border-radius:12px 14px 11px 15px;background:#F6D140;color:#23194A;font:inherit;font-size:16px;font-weight:600;cursor:pointer;box-shadow:3px 4px 0 #23194A}
+.pz-btn-lemon:active{transform:translate(2px,3px);box-shadow:1px 1px 0 #23194A}
+.pz-btn-lemon[disabled]{opacity:.6;cursor:progress}
+.pz-btn-secondary{min-height:52px;padding:0 20px;border:2px solid #23194A;border-radius:12px 14px 11px 15px;background:#FFFFFF;color:#23194A;font:inherit;font-size:16px;font-weight:600;cursor:pointer}
+.pz-step[hidden]{display:none !important}
+@media (prefers-reduced-motion: reduce){.pz-btn-lemon:active{transform:none}}
+</style>
+
+<script>
+(function () {
+  var TO = 'timo@peazypricing.com';
+  var dlg = document.getElementById('pz-calc');
+  var form = document.getElementById('pz-calc-form');
+  var opener = null;
+  function eur(n) { return '€' + Math.round(n).toLocaleString('en-IE'); }
+  function short(n) {
+    if (n >= 1e6) return '€' + (n / 1e6).toLocaleString('en-IE', { maximumFractionDigits: 1 }) + 'M';
+    return '€' + Math.round(n / 1e3).toLocaleString('en-IE') + 'k';
+  }
+  function show(step) {
+    form.querySelectorAll('.pz-step').forEach(function (s) { s.hidden = s.getAttribute('data-step') !== String(step); });
+    var lbl = form.querySelector('.pz-step-label');
+    lbl.hidden = step === 3;
+    document.getElementById('pz-step-n').textContent = step;
+    var first = form.querySelector('.pz-step[data-step="' + step + '"] input, .pz-step[data-step="' + step + '"] select, .pz-step[data-step="' + step + '"] button');
+    if (first) first.focus();
+  }
+  function flag(el, bad) {
+    el.setAttribute('aria-invalid', bad ? 'true' : 'false');
+    var err = el.closest('.pz-field') && el.closest('.pz-field').querySelector('.pz-err');
+    if (err) err.hidden = !bad;
+    return bad;
+  }
+  function revenueM() { return parseFloat(String(document.getElementById('pz-revenue').value).replace(',', '.')); }
+
+  document.querySelectorAll('.pz-open-calc').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault(); opener = a;
+      if (typeof dlg.showModal === 'function') { dlg.showModal(); } else { dlg.setAttribute('open', ''); }
+      show(form.querySelector('.pz-step[data-step="3"]').hidden ? (form.querySelector('.pz-step[data-step="2"]').hidden ? 1 : 2) : 3);
+    });
+  });
+  dlg.addEventListener('close', function () { if (opener) opener.focus(); });
+  dlg.querySelectorAll('.pz-calc-close').forEach(function (b) { b.addEventListener('click', function () { dlg.close(); }); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+
+  document.getElementById('pz-next').addEventListener('click', function () {
+    var ind = document.getElementById('pz-industry'), rev = document.getElementById('pz-revenue');
+    var r = revenueM();
+    var b1 = flag(ind, !ind.value), b2 = flag(rev, !(r > 0));
+    if (b1) { ind.focus(); return; }
+    if (b2) { rev.focus(); return; }
+    show(2);
+  });
+  document.getElementById('pz-back').addEventListener('click', function () { show(1); });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var bad = false, firstBad = null;
+    ['pz-name', 'pz-company', 'pz-email'].forEach(function (id) {
+      var el = document.getElementById(id);
+      var b = id === 'pz-email' ? !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim()) : !el.value.trim();
+      flag(el, b); if (b && !firstBad) firstBad = el; bad = bad || b;
+    });
+    var consent = document.getElementById('pz-consent');
+    document.getElementById('pz-consent-err').hidden = consent.checked;
+    if (!consent.checked && !firstBad) firstBad = consent;
+    if (bad || !consent.checked) { firstBad.focus(); return; }
+
+    var rev = revenueM() * 1e6, lo = rev * 0.02, mid = rev * 0.035, hi = rev * 0.05;
+    document.getElementById('pz-res-range').textContent = short(lo) + ' to ' + short(hi);
+    document.getElementById('pz-res-basis').textContent = 'Based on ' + short(rev) + ' annual revenue in ' + document.getElementById('pz-industry').value.toLowerCase() + ', with prices 2 to 5% better realised.';
+    document.getElementById('pz-res-low').textContent = eur(lo);
+    document.getElementById('pz-res-mid').textContent = eur(mid);
+    document.getElementById('pz-res-high').textContent = eur(hi);
+    document.getElementById('pz-res-ebitda').textContent = short(lo) + ' to ' + short(hi) + ' a year';
+
+    var btn = document.getElementById('pz-submit');
+    btn.disabled = true; btn.textContent = 'Calculating…';
+    var v = function (id) { return document.getElementById(id).value.trim(); };
+    var payload = {
+      _subject: 'Peazy upside calculator: ' + v('pz-company') + ' (' + short(rev) + ')',
+      _template: 'table',
+      _captcha: 'false',
+      _honey: form.querySelector('[name="_honey"]').value,
+      Name: v('pz-name'), Company: v('pz-company'), 'Job title': v('pz-role'), Email: v('pz-email'), Phone: v('pz-phone'),
+      Industry: v('pz-industry'),
+      'Annual revenue': eur(rev),
+      'Upside at 2%': eur(lo), 'Upside at 3.5%': eur(mid), 'Upside at 5%': eur(hi),
+      'Consent to contact': 'Yes',
+      Page: location.href
+    };
+    fetch('https://formsubmit.co/ajax/' + TO, {
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload)
+    }).then(function (r) { return r.json().then(function (j) { return r.ok && String(j.success) === 'true'; }); })
+      .catch(function () { return false; })
+      .then(function (ok) {
+        document.getElementById('pz-send-ok').hidden = !ok;
+        document.getElementById('pz-send-err').hidden = ok;
+        btn.disabled = false; btn.textContent = 'Calculate my upside';
+        show(3);
+      });
+  });
+})();
+</script>
+
+</body>
+</html>
