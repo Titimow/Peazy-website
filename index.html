@@ -15,7 +15,80 @@ body{margin:0;background:#FFFFFF}
 h1,h2,h3,p,ul{margin:0}
 a{color:#5444AC}a:hover{color:#32286B}
 a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
-@media (max-width: 820px){.pz-navlinks{display:none !important}}
+.pz-m-only,.pz-how-arrow-m,.pz-cta-short,.pz-menu-btn{display:none}
+.pz-menu-btn{width:44px;height:44px;padding:0;border:2px solid #23194A;border-radius:12px 14px 11px 15px;background:#FFFFFF;color:#23194A;cursor:pointer;align-items:center;justify-content:center}
+.pz-menu-btn:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px}
+
+/* Tablet and below: nav links move into a dropdown menu */
+@media (max-width: 820px){
+.pz-menu-btn{display:inline-flex}
+.pz-navlinks{display:none !important}
+.pz-nav.pz-nav-open .pz-navlinks{display:flex !important;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:8px 20px 16px;background:#FFFFFF;border-bottom:1px solid #E2E0EA;box-shadow:0 12px 24px rgba(35,25,74,.08)}
+.pz-nav.pz-nav-open .pz-navlinks a{display:flex;align-items:center;min-height:48px;font-size:17px;border-bottom:1px dashed #E2E0EA}
+.pz-nav.pz-nav-open .pz-navlinks a:last-child{border-bottom:0}
+}
+
+/* Phone layout */
+@media (max-width: 640px){
+.pz-nav{padding:12px 16px !important;gap:12px !important;flex-wrap:nowrap !important}
+.pz-logo-mark{height:36px !important}
+.pz-logo-word{font-size:32px !important}
+.pz-nav-cta{padding:0 14px !important;font-size:14px !important}
+.pz-d-only{display:none !important}
+.pz-m-only{display:block !important}
+
+/* hero: the note sits under the CTAs without a stray arrow */
+.pz-hero-note{margin-top:0 !important}
+.pz-hero-note p{font-size:22px !important}
+
+/* hero quote: all four columns fit, annotations point into the card */
+.pz-hero-mock{padding:40px 0 0 !important;display:flex;flex-direction:column}
+.pz-ann-floor{right:0 !important;font-size:21px !important}
+.pz-ann-floor svg{width:36px;height:34px}
+.pz-hero-mock > div:nth-child(2){margin-top:4px !important}
+.pz-quote-table{min-width:0 !important;font-size:12px !important}
+.pz-quote-table th,.pz-quote-table td{padding-left:6px !important;padding-right:6px !important}
+.pz-quote-table th:first-child,.pz-quote-table td:first-child{padding-left:14px !important}
+.pz-quote-table th:last-child,.pz-quote-table td:last-child{padding-right:14px !important}
+.pz-ann-found{position:static !important;align-self:flex-end;flex-direction:row;align-items:flex-start !important;margin:-6px 6px 0 0;font-size:22px !important;transform:rotate(-2deg) !important}
+.pz-ann-found span{padding-top:26px}
+
+/* projection: note moves above the chart and points down at the sweet spot */
+.pz-proj{display:flex;flex-direction:column;padding-bottom:0 !important}
+.pz-ann-sweet{position:static !important;order:-1;align-self:flex-start;align-items:flex-end !important;margin:0 0 -8px 4px;font-size:22px !important;transform:rotate(-2deg) !important}
+.pz-ann-sweet span{max-width:180px;line-height:1.05;padding-bottom:22px}
+.pz-proj-stats > div{flex:1 1 0 !important;min-width:0;padding:12px !important}
+.pz-proj-stats > div span:first-child{font-size:11px !important}
+.pz-proj-stats > div span:last-child{font-size:17px !important;white-space:nowrap}
+
+/* before / after */
+.pz-ba-list{font-size:16px !important;gap:14px !important}
+
+/* how it works: a vertical timeline with arrows pointing down */
+.pz-how-steps{flex-direction:column !important;flex-wrap:nowrap !important;gap:0 !important}
+.pz-how-arrow{display:none !important}
+.pz-how-arrow-m{display:block;margin:4px 0 4px 12px}
+.pz-how-step{flex:none !important;display:grid !important;grid-template-columns:72px 1fr;column-gap:16px;row-gap:6px !important;align-items:start}
+.pz-how-num{grid-row:1 / span 2;width:72px !important;height:62px !important}
+.pz-how-num span{font-size:44px !important}
+.pz-how-step h3{font-size:20px !important;padding-top:6px}
+.pz-how-step p{font-size:15px !important}
+
+/* results */
+.pz-stat-num{font-size:56px !important}
+
+/* general card padding */
+#value article{padding:28px 22px !important}
+#who h3 + p{font-size:15px !important}
+#who > div > div:last-child > div{padding:24px 22px !important}
+
+/* footer */
+.pz-foot-lockup{height:64px !important}
+}
+@media (max-width: 400px){
+.pz-cta-long{display:none}
+.pz-cta-short{display:inline}
+}
 </style>
 <style>html{scroll-behavior:smooth}@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}</style>
 </head>
@@ -26,19 +99,22 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <svg width="0" height="0" style="position: absolute;" aria-hidden="true" focusable="false"><defs><filter id="pz-wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="3" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap></filter></defs></svg>
 
 <!-- NAV -->
-<header style="border-bottom: 1px solid #E2E0EA; background: #FFFFFF;">
-<nav aria-label="Main" style="max-width: 1200px; margin: 0 auto; padding: 18px clamp(20px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+<header style="position: relative; z-index: 10; border-bottom: 1px solid #E2E0EA; background: #FFFFFF;">
+<nav aria-label="Main" class="pz-nav" style="max-width: 1200px; margin: 0 auto; padding: 18px clamp(20px, 4vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
 <a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #23194A;">
-<img src="peazy-mark.svg" alt="" style="height: 44px; width: auto; display: block;">
-<span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 38px; line-height: 1; color: #23194A;">peazy</span>
+<img src="peazy-mark.svg" alt="" class="pz-logo-mark" style="height: 44px; width: auto; display: block;">
+<span class="pz-logo-word" style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 38px; line-height: 1; color: #23194A;">peazy</span>
 </a>
-<div class="pz-navlinks" style="display: flex; align-items: center; gap: 32px; font-size: 15px; font-weight: 500;">
+<div class="pz-navlinks" id="pz-navlinks" style="display: flex; align-items: center; gap: 32px; font-size: 15px; font-weight: 500;">
 <a href="#value" style="color: #33304A; text-decoration: none;">Value</a>
 <a href="#how" style="color: #33304A; text-decoration: none;">How it works</a>
 <a href="#who" style="color: #33304A; text-decoration: none;">Who it's for</a>
 <a href="#results" style="color: #33304A; text-decoration: none;">Results</a>
 </div>
-<a href="#calculator" class="pz-open-calc" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #23194A; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none;">Calculate your upside</a>
+<div style="display: flex; align-items: center; gap: 8px;">
+<a href="#calculator" class="pz-open-calc pz-nav-cta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #23194A; color: #FFFFFF; font-size: 15px; font-weight: 600; text-decoration: none;"><span class="pz-cta-long">Calculate your upside</span><span class="pz-cta-short">Your upside</span></a>
+<button type="button" class="pz-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="pz-navlinks"><svg width="22" height="18" viewBox="0 0 22 18" aria-hidden="true"><path d="M2 3 C 8 2, 14 4, 20 3 M2 9 C 8 10, 14 8, 20 9 M2 15 C 8 14, 14 16, 20 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
+</div>
 </nav>
 </header>
 
@@ -54,15 +130,15 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <a href="#calculator" class="pz-open-calc" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 12px 14px 11px 15px; background: #F6D140; color: #23194A; font-size: 17px; font-weight: 600; text-decoration: none; box-shadow: 3px 4px 0 #23194A; border: 2px solid #23194A;">Calculate what Peazy could mean for you</a>
 <a href="#value" style="position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 17px; font-weight: 600; color: #5444AC; text-decoration: none;">See the value we bring<svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true"><path d="M1 7 H15 M10 2 L16 7 L10 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
 </div>
-<div style="display: flex; align-items: flex-end; gap: 6px; margin-top: 4px;">
-<svg width="64" height="40" viewBox="0 0 64 40" aria-hidden="true" style="filter: url(#pz-wobble); flex: none;"><path d="M58 6 C 40 4, 18 10, 10 30 M4 22 L10 32 L20 26" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<div class="pz-hero-note" style="display: flex; align-items: flex-end; gap: 6px; margin-top: 4px;">
+<svg class="pz-d-only" width="64" height="40" viewBox="0 0 64 40" aria-hidden="true" style="filter: url(#pz-wobble); flex: none;"><path d="M58 6 C 40 4, 18 10, 10 30 M4 22 L10 32 L20 26" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 <p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; line-height: 1.1; color: #23194A; transform: rotate(-1.5deg);">built by pricing people, for pricing people</p>
 </div>
 </div>
 
 <!-- Hero quote mock -->
-<div style="flex: 1 1 440px; min-width: 0; position: relative; padding: 28px 8px 48px 0;">
-<div style="position: absolute; top: 0; right: 4%; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; color: #23194A; transform: rotate(3deg); display: flex; align-items: center; gap: 4px; z-index: 2;">every line above floor<svg width="44" height="40" viewBox="0 0 44 40" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M4 6 C 22 4, 34 14, 36 34 M28 28 L36 36 L42 26" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+<div class="pz-hero-mock" style="flex: 1 1 440px; min-width: 0; position: relative; padding: 28px 8px 48px 0;">
+<div class="pz-ann-floor" style="position: absolute; top: 0; right: 4%; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; color: #23194A; transform: rotate(3deg); display: flex; align-items: center; gap: 4px; z-index: 2;">every line above floor<svg width="44" height="40" viewBox="0 0 44 40" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M4 6 C 22 4, 34 14, 36 34 M28 28 L36 36 L42 26" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
 
 <div style="background: #FFFFFF; border: 2px solid #23194A; border-radius: 16px 20px 14px 18px; box-shadow: 8px 10px 0 #F6D140; overflow: hidden; transform: rotate(-0.6deg); margin-top: 28px;">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #E2E0EA; background: #F7F7FA; flex-wrap: wrap;">
@@ -73,7 +149,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 4px; background: #DDF4EF; color: #0B6E5F; font-size: 12px; font-weight: 600;"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.5 L5 9 L9.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>Ready to send</span>
 </div>
 <div style="overflow-x: auto;">
-<table style="width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; min-width: 420px;">
+<table class="pz-quote-table" style="width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; min-width: 420px;">
 <thead>
 <tr style="text-align: left; color: #4F4A66; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
 <th style="padding: 10px 18px; font-weight: 600; border-bottom: 1px solid #E2E0EA;">Item</th>
@@ -113,7 +189,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 </div>
 </div>
 
-<div style="position: absolute; left: -8px; bottom: 0; display: flex; align-items: center; gap: 6px; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 26px; color: #23194A; transform: rotate(-3deg);"><svg width="50" height="44" viewBox="0 0 50 44" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M6 38 C 10 20, 26 10, 44 8 M34 2 L45 8 L36 16" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>€288 of margin, found</div>
+<div class="pz-ann-found" style="position: absolute; left: -8px; bottom: 0; display: flex; align-items: center; gap: 6px; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 26px; color: #23194A; transform: rotate(-3deg);"><svg class="pz-d-only" width="50" height="44" viewBox="0 0 50 44" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M6 38 C 10 20, 26 10, 44 8 M34 2 L45 8 L36 16" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>€288 of margin, found</span><svg class="pz-m-only" width="40" height="48" viewBox="0 0 40 48" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M8 44 C 12 30, 20 16, 30 6 M20 6 L31 5 L31 17" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
 </div>
 
 </div>
@@ -192,7 +268,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 </ul>
 </div>
 
-<div style="flex: 1 1 460px; min-width: 0; position: relative; padding-bottom: 40px;">
+<div class="pz-proj" style="flex: 1 1 460px; min-width: 0; position: relative; padding-bottom: 40px;">
 <div style="background: #FFFFFF; border: 2px solid #23194A; border-radius: 18px 14px 20px 16px; box-shadow: 8px 10px 0 #F6D140; overflow: hidden; transform: rotate(0.5deg);">
 <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #E2E0EA; background: #F7F7FA; flex-wrap: wrap;">
 <div style="display: flex; flex-direction: column; gap: 2px;">
@@ -216,7 +292,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <text x="464" y="248" text-anchor="end" font-family="Geist, system-ui, sans-serif" font-size="12" fill="#6B6782">Higher price</text>
 </svg>
 </div>
-<div style="display: flex; flex-wrap: wrap; border-top: 1px solid #E2E0EA; font-variant-numeric: tabular-nums;">
+<div class="pz-proj-stats" style="display: flex; flex-wrap: wrap; border-top: 1px solid #E2E0EA; font-variant-numeric: tabular-nums;">
 <div style="flex: 1 1 120px; padding: 14px 18px; display: flex; flex-direction: column; gap: 2px; border-right: 1px solid #E2E0EA;">
 <span style="font-size: 12px; color: #6B6782;">Win probability</span>
 <span style="font-size: 20px; font-weight: 600; color: #1C1930;">62%</span>
@@ -231,7 +307,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 </div>
 </div>
 </div>
-<div style="position: absolute; right: 2%; bottom: 0; display: flex; align-items: center; gap: 6px; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 26px; color: #23194A; transform: rotate(-2.5deg);"><svg width="48" height="40" viewBox="0 0 48 40" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M42 36 C 36 22, 22 12, 6 8 M16 2 L5 8 L13 17" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>the sweet spot: win it, keep the margin</div>
+<div class="pz-ann-sweet" style="position: absolute; right: 2%; bottom: 0; display: flex; align-items: center; gap: 6px; font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 26px; color: #23194A; transform: rotate(-2.5deg);"><svg class="pz-d-only" width="48" height="40" viewBox="0 0 48 40" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M42 36 C 36 22, 22 12, 6 8 M16 2 L5 8 L13 17" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg><span>the sweet spot: win it, keep the margin</span><svg class="pz-m-only" width="44" height="52" viewBox="0 0 44 52" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M6 6 C 22 8, 32 20, 30 46 M21 38 L30 48 L38 37" fill="none" stroke="#23194A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
 </div>
 
 </div>
@@ -248,7 +324,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 
 <div style="flex: 1 1 380px; min-width: 0; padding: 36px 32px; border: 2px dashed #A7A3B8; border-radius: 18px; display: flex; flex-direction: column; gap: 20px;">
 <p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 36px; line-height: 1; color: #4F4A66;">Without Peazy</p>
-<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; font-size: 18px; line-height: 1.4; color: #4F4A66;">
+<ul class="pz-ba-list" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; font-size: 18px; line-height: 1.4; color: #4F4A66;">
 <li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Prices live in five different spreadsheets</li>
 <li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Discounts depend on who negotiates hardest</li>
 <li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Margin shows up after the deal is signed</li>
@@ -263,7 +339,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <img src="peazy-mark-reversed.svg" alt="" style="height: 40px; width: auto; display: block;">
 <p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 36px; line-height: 1; color: #F6D140;">With Peazy</p>
 </div>
-<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; font-size: 18px; line-height: 1.4; color: #FFFFFF;">
+<ul class="pz-ba-list" style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px; font-size: 18px; line-height: 1.4; color: #FFFFFF;">
 <li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>One price master, always current</li>
 <li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Discount rules everyone can see and trust</li>
 <li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Margin on every line, before you hit send</li>
@@ -284,10 +360,10 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 28px; line-height: 1; color: #4A6B1F; transform: rotate(-1.5deg); transform-origin: left center;">how it works</p>
 <h2 style="font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #23194A;">From price list to signed quote, in one flow</h2>
 </div>
-<div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px;">
+<div class="pz-how-steps" style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px;">
 
-<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
-<div style="position: relative; width: 84px; height: 72px; display: flex; align-items: center; justify-content: center; isolation: isolate;">
+<div class="pz-how-step" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+<div class="pz-how-num" style="position: relative; width: 84px; height: 72px; display: flex; align-items: center; justify-content: center; isolation: isolate;">
 <svg viewBox="0 0 100 86" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; filter: url(#pz-wobble);"><path d="M50 6 C 80 4, 96 24, 92 48 C 88 72, 60 82, 36 78 C 12 74, 4 52, 8 34 C 12 16, 28 8, 50 6 Z" fill="#F6D140"></path></svg>
 <span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 52px; line-height: 1; color: #23194A;">1</span>
 </div>
@@ -295,10 +371,11 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Price master data, costs and customer agreements in one source of truth, instead of scattered files.</p>
 </div>
 
-<svg width="80" height="48" viewBox="0 0 80 48" aria-hidden="true" style="flex: 0 0 80px; margin-top: 18px; filter: url(#pz-wobble);"><path d="M4 30 C 22 8, 50 6, 72 24 M62 14 L73 25 L59 30" fill="none" stroke="#23194A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="pz-how-arrow-m" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M24 4 C 34 16, 18 30, 28 50 M18 41 L28 51 L36 40" fill="none" stroke="#23194A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="pz-how-arrow" width="80" height="48" viewBox="0 0 80 48" aria-hidden="true" style="flex: 0 0 80px; margin-top: 18px; filter: url(#pz-wobble);"><path d="M4 30 C 22 8, 50 6, 72 24 M62 14 L73 25 L59 30" fill="none" stroke="#23194A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 
-<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
-<div style="position: relative; width: 84px; height: 72px; display: flex; align-items: center; justify-content: center; isolation: isolate;">
+<div class="pz-how-step" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+<div class="pz-how-num" style="position: relative; width: 84px; height: 72px; display: flex; align-items: center; justify-content: center; isolation: isolate;">
 <svg viewBox="0 0 100 86" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; filter: url(#pz-wobble);"><path d="M46 4 C 78 6, 98 26, 92 50 C 86 74, 56 84, 32 76 C 10 68, 2 48, 10 30 C 16 14, 30 4, 46 4 Z" fill="#F6D140"></path></svg>
 <span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 52px; line-height: 1; color: #23194A;">2</span>
 </div>
@@ -306,10 +383,11 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Define pricing rules, margin floors and approval thresholds once. Peazy applies them to every quote, every time.</p>
 </div>
 
-<svg width="80" height="48" viewBox="0 0 80 48" aria-hidden="true" style="flex: 0 0 80px; margin-top: 18px; filter: url(#pz-wobble);"><path d="M4 18 C 24 40, 52 40, 72 20 M58 18 L72 19 L70 33" fill="none" stroke="#23194A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="pz-how-arrow-m" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M24 4 C 34 16, 18 30, 28 50 M18 41 L28 51 L36 40" fill="none" stroke="#23194A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<svg class="pz-how-arrow" width="80" height="48" viewBox="0 0 80 48" aria-hidden="true" style="flex: 0 0 80px; margin-top: 18px; filter: url(#pz-wobble);"><path d="M4 18 C 24 40, 52 40, 72 20 M58 18 L72 19 L70 33" fill="none" stroke="#23194A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
 
-<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
-<div style="position: relative; width: 84px; height: 72px; display: flex; align-items: center; justify-content: center; isolation: isolate;">
+<div class="pz-how-step" style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+<div class="pz-how-num" style="position: relative; width: 84px; height: 72px; display: flex; align-items: center; justify-content: center; isolation: isolate;">
 <svg viewBox="0 0 100 86" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; filter: url(#pz-wobble);"><path d="M54 8 C 84 8, 96 30, 90 52 C 84 74, 54 82, 30 74 C 8 66, 4 44, 12 28 C 20 12, 34 8, 54 8 Z" fill="#F6D140"></path></svg>
 <span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 52px; line-height: 1; color: #23194A;">3</span>
 </div>
@@ -329,9 +407,9 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <h2 style="font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #FFFFFF;">Built to move the numbers that matter</h2>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 24px;">
-<div style="flex: 1 1 240px; min-width: 0; padding: 28px 28px 32px; border: 1.5px solid #4A3F86; border-radius: 16px 12px 18px 14px; display: flex; flex-direction: column; gap: 8px;"><span style="font-family: &quot;Caveat Brush&quot;, &quot;Segoe Print&quot;, cursive; font-size: 72px; line-height: 1; color: rgb(246, 209, 64)">2 to 5 pts</span><span style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255)">Gross margin</span><span style="font-size: 15px; line-height: 1.5; color: rgb(201, 193, 240)">From value-based prices and fewer off-policy discounts.</span></div>
-<div style="flex: 1 1 240px; min-width: 0; padding: 28px 28px 32px; border: 1.5px solid #4A3F86; border-radius: 12px 18px 14px 16px; display: flex; flex-direction: column; gap: 8px;"><span style="font-family: &quot;Caveat Brush&quot;, &quot;Segoe Print&quot;, cursive; font-size: 72px; line-height: 1; color: rgb(246, 209, 64)">50%</span><span style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255)">Less margin variance</span><span style="font-size: 15px; line-height: 1.5; color: rgb(201, 193, 240)">Floors and approvals keep deal margins inside a tight band.</span></div>
-<div style="flex: 1 1 240px; min-width: 0; padding: 28px 28px 32px; border: 1.5px solid #4A3F86; border-radius: 18px 14px 12px 16px; display: flex; flex-direction: column; gap: 8px;"><span style="font-family: &quot;Caveat Brush&quot;, &quot;Segoe Print&quot;, cursive; font-size: 72px; line-height: 1; color: rgb(246, 209, 64)">Up to 5×</span><span style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255)">Faster quote turnaround</span><span style="font-size: 15px; line-height: 1.5; color: rgb(201, 193, 240)">Request to signed quote, without the approval ping-pong.</span></div>
+<div style="flex: 1 1 240px; min-width: 0; padding: 28px 28px 32px; border: 1.5px solid #4A3F86; border-radius: 16px 12px 18px 14px; display: flex; flex-direction: column; gap: 8px;"><span class="pz-stat-num" style="font-family: &quot;Caveat Brush&quot;, &quot;Segoe Print&quot;, cursive; font-size: 72px; line-height: 1; color: rgb(246, 209, 64)">2 to 5 pts</span><span style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255)">Gross margin</span><span style="font-size: 15px; line-height: 1.5; color: rgb(201, 193, 240)">From value-based prices and fewer off-policy discounts.</span></div>
+<div style="flex: 1 1 240px; min-width: 0; padding: 28px 28px 32px; border: 1.5px solid #4A3F86; border-radius: 12px 18px 14px 16px; display: flex; flex-direction: column; gap: 8px;"><span class="pz-stat-num" style="font-family: &quot;Caveat Brush&quot;, &quot;Segoe Print&quot;, cursive; font-size: 72px; line-height: 1; color: rgb(246, 209, 64)">50%</span><span style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255)">Less margin variance</span><span style="font-size: 15px; line-height: 1.5; color: rgb(201, 193, 240)">Floors and approvals keep deal margins inside a tight band.</span></div>
+<div style="flex: 1 1 240px; min-width: 0; padding: 28px 28px 32px; border: 1.5px solid #4A3F86; border-radius: 18px 14px 12px 16px; display: flex; flex-direction: column; gap: 8px;"><span class="pz-stat-num" style="font-family: &quot;Caveat Brush&quot;, &quot;Segoe Print&quot;, cursive; font-size: 72px; line-height: 1; color: rgb(246, 209, 64)">Up to 5×</span><span style="font-size: 18px; font-weight: 600; color: rgb(255, 255, 255)">Faster quote turnaround</span><span style="font-size: 15px; line-height: 1.5; color: rgb(201, 193, 240)">Request to signed quote, without the approval ping-pong.</span></div>
 </div>
 </div>
 </section>
@@ -380,7 +458,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <footer style="background: #23194A; color: #C9C1F0;">
 <div style="max-width: 1200px; margin: 0 auto; padding: 48px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 32px;">
 <div style="display: flex; align-items: center; gap: 20px;">
-<img src="peazy-lockup-reversed.svg" alt="Peazy" style="height: 96px; width: auto; display: block;">
+<img src="peazy-lockup-reversed.svg" alt="Peazy" class="pz-foot-lockup" style="height: 96px; width: auto; display: block;">
 <p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 26px; line-height: 1.1; color: #F6D140; max-width: 220px;">pricing made easy</p>
 </div>
 <nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 12px 28px; font-size: 15px;">
@@ -525,6 +603,11 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
     if (err) err.hidden = !bad;
     return bad;
   }
+  var nav = document.querySelector('.pz-nav'), menuBtn = nav.querySelector('.pz-menu-btn');
+  function setMenu(open) { nav.classList.toggle('pz-nav-open', open); menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false'); }
+  menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('pz-nav-open')); });
+  nav.querySelectorAll('.pz-navlinks a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('pz-nav-open')) { setMenu(false); menuBtn.focus(); } });
   function revenueM() { return parseFloat(String(document.getElementById('pz-revenue').value).replace(',', '.')); }
 
   document.querySelectorAll('.pz-open-calc').forEach(function (a) {
