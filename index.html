@@ -20,8 +20,9 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 .pz-menu-btn:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px}
 
 /* Tablet and below: nav links move into a dropdown menu */
-@media (max-width: 1060px){.pz-agents{grid-template-columns:repeat(2,minmax(0,1fr)) !important}}
-@media (max-width: 980px){
+.pz-why-tile{grid-column:span 2}.pz-why-tile:nth-child(n+4){grid-column:span 3}
+@media (max-width: 1060px){.pz-agents{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.pz-why-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}.pz-why-tile{grid-column:auto !important}.pz-why-tile:last-child{grid-column:1 / -1 !important}}
+@media (max-width: 1080px){
 .pz-menu-btn{display:inline-flex}
 .pz-navlinks{display:none !important}
 .pz-nav.pz-nav-open .pz-navlinks{display:flex !important;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:8px 20px 16px;background:#FFFFFF;border-bottom:1px solid #E2E0EA;box-shadow:0 12px 24px rgba(35,25,74,.08)}
@@ -32,6 +33,8 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 /* Phone layout */
 @media (max-width: 640px){
 .pz-agents{grid-template-columns:1fr !important;gap:20px !important}
+.pz-why-grid{grid-template-columns:1fr !important;gap:16px !important}
+.pz-why-tile{padding:22px !important}
 .pz-agent{padding:24px 22px !important}
 .pz-nav{padding:12px 16px !important;gap:12px !important;flex-wrap:nowrap !important}
 .pz-logo-mark{height:36px !important}
@@ -110,6 +113,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 </a>
 <div class="pz-navlinks" id="pz-navlinks" style="display: flex; align-items: center; gap: 32px; font-size: 15px; font-weight: 500;">
 <a href="#value" style="color: #33304A; text-decoration: none;">Value</a>
+<a href="#why" style="color: #33304A; text-decoration: none;">Why Peazy</a>
 <a href="#how" style="color: #33304A; text-decoration: none;">How it works</a>
 <a href="#ai" style="color: #33304A; text-decoration: none;">AI agents</a>
 <a href="#who" style="color: #33304A; text-decoration: none;">Who it's for</a>
@@ -219,7 +223,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Price to value, not to habit. Peazy recommends the right price per customer, segment and volume, so you stop leaving money on the table.</p>
 <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.45; color: #1C1930;">
 <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Value-based price recommendations on every line</li>
-<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Price lists that stay current across channels</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>One price cascade, from master list to every customer</li>
 <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Margin visible before the quote goes out</li>
 </ul>
 </article>
@@ -234,7 +238,8 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 15px; line-height: 1.45; color: #1C1930;">
 <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Margin floors per product and customer tier</li>
 <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Approvals only when a deal really needs one</li>
-<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Cost increases reach your prices, not your margin</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Indexation applied per contract, on its own date</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Rebates that steer the buying behaviour you want, checked on volume, growth and mix and paid only when earned</li>
 </ul>
 </article>
 
@@ -256,6 +261,52 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 </div>
 </section>
 
+<!-- WHY PEAZY -->
+<section id="why" style="background: #FFFFFF; border-top: 1px solid #E2E0EA;">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 48px); display: flex; flex-direction: column; gap: 48px;">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 860px;">
+<p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 28px; line-height: 1; color: #4A6B1F; transform: rotate(-1.5deg); transform-origin: left center;">why Peazy</p>
+<h2 style="font-size: clamp(32px, 3.8vw, 48px); line-height: 1.1; font-weight: 600; letter-spacing: -0.02em; color: #23194A;">Where margin leaks, Peazy plugs it</h2>
+</div>
+<div class="pz-why-grid" style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 24px;">
+<div class="pz-why-tile" style="min-width: 0; padding: 28px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #FFF4C2; border: 2px solid #23194A; display: inline-flex; align-items: center; justify-content: center; color: #23194A;"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6 H20 V18 A2 2 0 0 1 18 20 H6 A2 2 0 0 1 4 18 Z"/><path d="M4 6 L7 3 H17 L20 6"/><path d="M15 12 H20 V15 H15 A1.5 1.5 0 0 1 15 12 Z"/></svg></span>
+<h3 style="font-size: 20px; line-height: 1.25; font-weight: 600; color: #23194A;">Margin after rebates</h3>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #4F4A66;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #FDE4EA; color: #8C1230; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Leak</span><span>Rebates quietly eat margin that never shows on the invoice.</span></p>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #1C1930;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #DDF4EF; color: #0B6E5F; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Fix</span><span>See what you really pocket once rebates are paid, and make every rebate earn its keep.</span></p>
+</div>
+<div class="pz-why-tile" style="min-width: 0; padding: 28px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #FFF4C2; border: 2px solid #23194A; display: inline-flex; align-items: center; justify-content: center; color: #23194A;"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10 H20.5 M8 3 V7 M16 3 V7"/><path d="M9 16 L12 13 L15 16"/></svg></span>
+<h3 style="font-size: 20px; line-height: 1.25; font-weight: 600; color: #23194A;">Smart indexation</h3>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #4F4A66;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #FDE4EA; color: #8C1230; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Leak</span><span>Cost increases you're entitled to pass on never reach your prices.</span></p>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #1C1930;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #DDF4EF; color: #0B6E5F; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Fix</span><span>Cost changes reach your prices only where contracts allow, on each contract's own date.</span></p>
+</div>
+<div class="pz-why-tile" style="min-width: 0; padding: 28px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #FFF4C2; border: 2px solid #23194A; display: inline-flex; align-items: center; justify-content: center; color: #23194A;"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="4" rx="1"/><path d="M12 6.5 V10 M6 10 H18 M6 10 V13 M18 10 V13 M12 10 V13"/><rect x="3.5" y="13" width="5" height="4" rx="1"/><rect x="9.5" y="13" width="5" height="4" rx="1"/><rect x="15.5" y="13" width="5" height="4" rx="1"/><path d="M12 17 V21"/></svg></span>
+<h3 style="font-size: 20px; line-height: 1.25; font-weight: 600; color: #23194A;">One price cascade</h3>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #4F4A66;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #FDE4EA; color: #8C1230; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Leak</span><span>Prices drift apart across countries, channels and customers.</span></p>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #1C1930;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #DDF4EF; color: #0B6E5F; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Fix</span><span>Set prices once and they flow from master list to country, channel, segment and customer.</span></p>
+</div>
+<div class="pz-why-tile" style="min-width: 0; padding: 28px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #FFF4C2; border: 2px solid #23194A; display: inline-flex; align-items: center; justify-content: center; color: #23194A;"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L21 8 L12 13 L3 8 Z"/><path d="M3 12 L12 17 L21 12"/><path d="M3 16 L12 21 L21 16"/></svg></span>
+<h3 style="font-size: 20px; line-height: 1.25; font-weight: 600; color: #23194A;">Contract, spot &amp; project pricing</h3>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #4F4A66;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #FDE4EA; color: #8C1230; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Leak</span><span>Spot and project deals get priced off-system, outside your rules.</span></p>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #1C1930;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #DDF4EF; color: #0B6E5F; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Fix</span><span>Every way you sell, on one set of prices and rules.</span></p>
+</div>
+<div class="pz-why-tile" style="min-width: 0; padding: 28px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #FFF4C2; border: 2px solid #23194A; display: inline-flex; align-items: center; justify-content: center; color: #23194A;"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M2.5 20 C 3 15.5, 13 15.5, 13.5 20"/><path d="M14 15 C 17 14.3, 21.3 15.5, 21.5 19"/></svg></span>
+<h3 style="font-size: 20px; line-height: 1.25; font-weight: 600; color: #23194A;">Peer view</h3>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #4F4A66;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #FDE4EA; color: #8C1230; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Leak</span><span>Some customers pay far less than comparable ones, and nobody notices.</span></p>
+<p style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; line-height: 1.5; color: #1C1930;"><span style="flex: none; box-sizing: border-box; width: 46px; text-align: center; margin-top: 1px; padding: 1px 0; border-radius: 4px; background: #DDF4EF; color: #0B6E5F; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;">Fix</span><span>See who pays less than peers in their micro-segment, and bring prices in line with value.</span></p>
+</div>
+</div>
+<div style="display: flex; align-items: center; gap: 14px; padding: 18px 22px; background: #FFFBE8; border: 2px dashed #23194A; border-radius: 14px 18px 12px 16px;">
+<svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true" style="flex: none; filter: url(#pz-wobble);"><path d="M23 3 L9 22 H19 L17 37 L31 17 H21 Z" fill="#F6D140" stroke="#23194A" stroke-width="2" stroke-linejoin="round"></path></svg>
+<p style="font-size: 16px; line-height: 1.5; color: #1C1930;"><strong>And all of this, live in weeks, not months.</strong> Peazy connects to your ERP and pricing data, AI maps and cleans it, and your team validates. No long implementation project.</p>
+</div>
+</div>
+</section>
+
 <!-- DEAL SUCCESS PROJECTIONS -->
 <section id="projections" style="background: #FFFFFF;">
 <div style="max-width: 1200px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; gap: 56px;">
@@ -269,6 +320,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>The price-to-win sweet spot for each deal</li>
 <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Know when a discount really buys the deal, and when it only costs margin</li>
 <li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Focus your team on the deals most likely to close</li>
+<li style="display: flex; gap: 10px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 1px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#0B6E5F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Align each price with value and willingness to pay, based on how peers perform in the same micro-segment</li>
 </ul>
 </div>
 
@@ -333,8 +385,9 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Discounts depend on who negotiates hardest</li>
 <li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Margin shows up after the deal is signed</li>
 <li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Quotes wait days in someone's inbox for approval</li>
-<li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Cost increases never make it to the price list</li>
+<li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Index clauses applied late, or forgotten</li>
 <li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">You learn the price was wrong when the deal is lost</li>
+<li style="text-decoration-line: line-through; text-decoration-style: wavy; text-decoration-color: #B4183E; text-decoration-thickness: 1.5px;">Rebates are paid out, whether the criteria were met or not</li>
 </ul>
 </div>
 
@@ -348,8 +401,9 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Discount rules everyone can see and trust</li>
 <li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Margin on every line, before you hit send</li>
 <li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Approvals routed automatically, only when they matter</li>
-<li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Cost changes flow to price in a single step</li>
+<li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Indexation on each contract's own terms and date</li>
 <li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Win odds and margin side by side, before you send</li>
+<li style="display: flex; gap: 12px; align-items: flex-start;"><svg width="22" height="20" viewBox="0 0 28 24" aria-hidden="true" style="flex: none; margin-top: 2px;"><path d="M3 12 C 6 14, 8 17, 10 20 C 14 12, 19 6, 25 2" fill="none" stroke="#F6D140" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg>Margin after rebates, visible on every quote</li>
 </ul>
 </div>
 
@@ -372,7 +426,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <span style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 52px; line-height: 1; color: #23194A;">1</span>
 </div>
 <h3 style="font-size: 22px; line-height: 1.25; font-weight: 600; color: #23194A;">Bring your prices home</h3>
-<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Price master data, costs and customer agreements in one source of truth, instead of scattered files.</p>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Connect Peazy to your ERP and existing pricing data. AI maps and cleans it, and your team validates. Price master, contracts, and contract, spot and project pricing come together in one place.</p>
 </div>
 
 <svg class="pz-how-arrow-m" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="filter: url(#pz-wobble);"><path d="M24 4 C 34 16, 18 30, 28 50 M18 41 L28 51 L36 40" fill="none" stroke="#23194A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
@@ -474,7 +528,7 @@ a:focus-visible{outline:2px solid #6C5BC7;outline-offset:3px;border-radius:6px}
 <div style="display: flex; flex-wrap: wrap; gap: 32px;">
 <div style="flex: 1 1 280px; min-width: 0; padding: 32px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
 <h3 style="font-size: 20px; font-weight: 600; color: #23194A;">Business owners &amp; commercial leaders</h3>
-<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Protect profit as you grow. See price realization and margin by segment, customer and rep, while there's still time to act.</p>
+<p style="font-size: 16px; line-height: 1.6; color: #4F4A66;">Protect profit as you grow. See price realization and margin by segment, customer and rep, while there's still time to act, and a price-volume-mix bridge that shows what really moved your margin. Simulate your strategy at every level and see its likely market impact before you roll it out.</p>
 <p style="font-family: 'Caveat Brush', 'Segoe Print', cursive; font-size: 24px; line-height: 1.15; color: #23194A; transform: rotate(-1.5deg); margin-top: auto; padding-top: 20px;">"no more margin surprises"</p>
 </div>
 <div style="flex: 1 1 280px; min-width: 0; padding: 32px; border-radius: 16px; background: #F7F7FA; border: 1px solid #E2E0EA; display: flex; flex-direction: column; gap: 12px;">
