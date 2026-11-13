@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insights · Peazy</title>
+<meta name="description" content="Insights: from looking back to acting first. See where margin leaked, and act before it leaks again.">
+<meta property="og:title" content="Insights · Peazy">
+<meta property="og:description" content="Insights: from looking back to acting first. See where margin leaked, and act before it leaks again.">
+<link rel="icon" type="image/svg+xml" href="peazy-mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat+Brush&amp;family=Geist:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-bars" viewBox="0 0 24 24"><path d="M4 20 H20 M7 20 V13 M12 20 V7 M17 20 V10"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3 V6 M12 18 V21 M3 12 H6 M18 12 H21 M5.6 5.6 L7.8 7.8 M16.2 16.2 L18.4 18.4 M5.6 18.4 L7.8 16.2 M16.2 7.8 L18.4 5.6"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M4 4 L21 12 L4 20 L7 12 Z M7 12 H13"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 17 C 9 14, 6 13, 6 9.5 A6 6 0 0 1 18 9.5 C 18 13, 15 14, 15 17 Z M10 21 H14"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 L21.5 20 H2.5 Z M12 10 V14.5 M12 17.3 V17.4"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 18.5 L5.2 15 A8 8 0 1 1 8.5 18.6 Z"/><path d="M8.5 11.5 C 9.5 10, 10.5 13, 12 11.5 S 14.5 13, 15.5 11.5"/></symbol>
+<symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2.5 L14.3 4.4 L17.3 4.2 L18.1 7.1 L20.6 8.8 L19.5 11.6 L20.6 14.4 L18.1 16.1 L17.3 19 L14.3 18.8 L12 20.7 L9.7 18.8 L6.7 19 L5.9 16.1 L3.4 14.4 L4.5 11.6 L3.4 8.8 L5.9 7.1 L6.7 4.2 L9.7 4.4 Z"/><path d="M8.5 11.8 L11 14.2 L15.5 9.4"/></symbol>
+<symbol id="i-trend" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M8 3 V7 M16 3 V7 M7 16 L10.5 12.5 L13 14.5 L17 10.5"/></symbol>
+<symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6 V18 C 5 19.7, 8 21, 12 21 S 19 19.7, 19 18 V6 M5 12 C 5 13.7, 8 15, 12 15 S 19 13.7, 19 12"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8.5 10.5 V7.5 A3.5 3.5 0 0 1 15.5 7.5 V10.5 M12 14.5 V16.5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5 L14.6 9 L20.5 9.7 L16.1 13.8 L17.3 19.7 L12 16.8 L6.7 19.7 L7.9 13.8 L3.5 9.7 L9.4 9 Z"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2.5 L5 13.5 H11.5 L10.5 21.5 L19 10 H12.5 Z"/></symbol>
+<symbol id="i-people" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M2.5 20 C 3 15.5, 13 15.5, 13.5 20"/><path d="M14 15 C 17 14.3, 21.3 15.5, 21.5 19"/></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 14 A4 4 0 0 0 15.7 14 L19 10.7 A4 4 0 0 0 13.3 5 L12 6.3 M14 10 A4 4 0 0 0 8.3 10 L5 13.3 A4 4 0 0 0 10.7 19 L12 17.7"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7 V12 L15.5 14"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12 C 6 5.5, 18 5.5, 21.5 12 C 18 18.5, 6 18.5, 2.5 12 Z"/><circle cx="12" cy="12" r="3"/></symbol>
+</defs></svg>
+<div class="pz-page">
+<header>
+<nav aria-label="Main" class="pz-nav">
+<a href="index.html" class="pz-logo"><img src="peazy-mark.svg" alt=""><span class="hand">peazy</span></a>
+<div class="pz-navlinks" id="pz-navlinks">
+<div class="pz-dd"><button type="button" aria-expanded="false" aria-controls="pz-dd-panel">Platform</button>
+<div class="pz-dd-panel" id="pz-dd-panel">
+<a href="insights.html" class="a-insights"><span class="ic "><svg class="icon"><use href="#i-bars"/></svg></span><span><b>Insights</b><small>See where margin leaked, and act before it leaks again.</small></span></a>
+<a href="price-management.html" class="a-pm"><span class="ic "><svg class="icon"><use href="#i-gear"/></svg></span><span><b>Price management</b><small>Keep every price right as costs and contracts change.</small></span></a>
+<a href="quote.html" class="a-quote"><span class="ic "><svg class="icon"><use href="#i-send"/></svg></span><span><b>Quote</b><small>Help sales quote quickly and with confidence.</small></span></a>
+<a href="value.html" class="a-value"><span class="ic "><svg class="icon"><use href="#i-bulb"/></svg></span><span><b>Value</b><small>Price and sell on what your offer is worth.</small></span></a>
+<a href="index.html#platform" class="all"><span>Platform overview</span><span aria-hidden="true">→</span></a>
+</div></div>
+<a href="index.html#worth">What it's worth</a>
+<a href="index.html#start">How you start</a>
+<a href="index.html#why">Why Peazy</a>
+<a href="index.html#faq">FAQ</a>
+</div>
+<div class="pz-nav-right">
+<a href="index.html#calculator" class="pz-nav-cta"><span class="pz-cta-long">Calculate your upside</span><span class="pz-cta-short">Your upside</span></a>
+<button type="button" class="pz-menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="pz-navlinks"><svg width="22" height="18" viewBox="0 0 22 18" aria-hidden="true"><path d="M2 3 C 8 2, 14 4, 20 3 M2 9 C 8 10, 14 8, 20 9 M2 15 C 8 14, 14 16, 20 15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
+</div>
+</nav>
+</header>
+
+<section id="top" class="a-insights">
+<div class="wrap mhero">
+<div class="mhero-text">
+<p class="crumb"><a href="index.html#platform">Platform</a><span aria-hidden="true">/</span><span class="pill m">Module 1 · Insights</span></p>
+<h1 style="font-size:clamp(34px,3.9vw,50px)">Know which customer to call before the quarter is <span class="hl">lost.</span></h1>
+<p class="hero-sub">Most reports tell you what went wrong last quarter. Peazy watches every customer's normal pattern and flags the moment it changes.</p>
+<p class="for">FOR <span>Business leaders</span><span>Finance</span><span>Sales leaders</span></p>
+<div class="ctas">
+<a href="mailto:timo@peazypricing.com?subject=Peazy%20Insights" class="btn btn-lemon">Talk to us about Insights</a>
+<a href="index.html#calculator" class="btn btn-ghost">Calculate your upside</a>
+</div>
+</div>
+<div class="mhero-vis"><div class="glimpse"><div class="mock a-insights" aria-hidden="true">
+<div class="mock-h"><span>Insights</span><i class="chipx warn">● Margin alert</i></div>
+<div class="bars"><i style="height:82%"></i><i class="dn" style="height:64%"></i><i class="dn" style="height:52%"></i><i class="up" style="height:68%"></i><i class="dn" style="height:57%"></i><i class="end" style="height:60%"></i></div>
+<div class="rows"><div><span class="sk" style="max-width:55%"></span><i class="chipx info">Peer view</i></div><div><span class="sk" style="max-width:40%"></span><i class="chipx lem">Act first</i></div></div>
+</div></div><p class="cap" style="margin-top:14px">Simplified illustration, not actual product data.</p></div>
+</div>
+</section>
+
+
+<section class="sec-grey a-insights">
+<div class="wrap">
+<div class="head">
+<p class="eyebrow">what you get</p>
+<h2>From looking back to acting first</h2>
+</div>
+<div class="g2">
+<div class="card"><span class="ic"><svg class="icon"><use href="#i-bars"/></svg></span><h3>Look back</h3>
+<ul class="ticks" style="font-size:16px">
+<li>What moved your margin: price, volume, mix or cost.</li>
+<li>Where discounts and rebates gave margin away.</li>
+<li>How customers and sales reps compare with their peers.</li>
+</ul></div>
+<div class="card"><span class="ic"><svg class="icon"><use href="#i-alert"/></svg></span><h3>Look ahead</h3>
+<ul class="ticks" style="font-size:16px">
+<li>Who hasn't ordered, but normally would have by now.</li>
+<li>Who is shifting to lower-margin products or dropping a product line.</li>
+<li>Whose discounts keep creeping up, deal after deal.</li>
+<li>Who is growing faster than their peers, and could buy more.</li>
+</ul>
+<p style="font-size:15px;color:var(--soft)">A few examples. Peazy watches for many more signals like these.</p></div>
+</div>
+</div>
+</section>
+
+<section class="sec-ink">
+<div class="wrap">
+<div class="head">
+<p class="eyebrow">every week</p>
+<h2>From signal to next action</h2>
+<p class="lede">Each account manager gets a short weekly list, ranked by what is at stake. No dashboards to dig through.</p>
+</div>
+<div class="g3 steps">
+<div class="card step"><span class="num">1</span><h3>Signal</h3><p>A customer breaks their normal pattern.</p></div>
+<div class="card step"><span class="num">2</span><h3>What's at stake</h3><p>What it could cost you, or what there is to gain.</p></div>
+<div class="card step"><span class="num">3</span><h3>Next action</h3><p>A suggested action, with an owner.</p></div>
+</div>
+<p class="lede" style="margin-top:32px;max-width:820px;color:#FFFFFF">Actions flow straight into the rest of Peazy: a signal can become a call, a price change or a new quote.</p>
+</div>
+</section>
+
+<section class="sec-white a-insights">
+<div class="wrap">
+<div class="split">
+<div>
+<div class="head" style="margin-bottom:28px">
+<p class="eyebrow">what changes</p>
+<h2>What it means for your business</h2>
+</div>
+<ul class="ticks"><li>Pricing, sales and leadership look at the same numbers.</li><li>You act while there is still time, instead of explaining afterwards.</li><li>Effort goes where the money is: the biggest leaks first.</li></ul>
+</div>
+<div class="startbox"><small>What you need to start</small><b>Your invoice data</b><p>That is all Insights needs. It can be live within weeks, and it works on its own, without the other modules.</p></div>
+</div>
+
+</div>
+</section>
+
+<section class="sec-grey">
+<div class="wrap">
+<div class="head">
+<p class="eyebrow">part of one platform</p>
+<h2>Where Insights fits</h2>
+<p class="lede">Every module runs on the same core: your price data in one place, connected to your ERP. Start with one, add the others when you're ready.</p>
+</div>
+<div class="path"><a href="insights.html" class="a-insights cur" aria-current="page"><small>Module 1</small>Insights</a><a href="price-management.html" class="a-pm"><small>Module 2</small>Price management</a><a href="quote.html" class="a-quote"><small>Module 3</small>Quote</a><a href="value.html" class="a-value"><small>Add-on</small>Value</a></div>
+<a class="nextmod a-pm" href="price-management.html" style="margin-top:28px"><span><small>Found the leaks? Fix them at the source.</small><b>Price management: set and keep the right price</b></span><span class="link-arrow">Explore Price management</span></a>
+</div>
+</section>
+
+<section id="faq" class="sec-white">
+<div class="wrap">
+<div class="head c">
+<p class="eyebrow">good to know</p>
+<h2>Questions about Insights</h2>
+</div>
+<div class="faq">
+<details><summary>What data do you need?</summary><p>Your invoice data. A Quick Scan starts from the same data and gives you a first picture within a week.</p></details>
+<details><summary>How fast can Insights be live?</summary><p>Within weeks.</p></details>
+<details><summary>Do we need the other modules?</summary><p>No. Insights works on its own and is where most companies start. You can add Price management and Quote later, on the same core.</p></details>
+<details><summary>Does Insights change our prices?</summary><p>No. Insights suggests actions. It never changes a price or contacts a customer on its own. Your people decide.</p></details>
+</div>
+</div>
+</section>
+
+<section id="contact" class="sec-ink">
+<div class="wrap band">
+<img src="peazy-mark-reversed.svg" alt="">
+<h2>See what Insights could mean for you</h2>
+<p class="lede">The Quick Scan shows where margin leaked. Insights keeps watching, so you act before it happens again.</p>
+<div class="ctas" style="justify-content:center">
+<a href="mailto:timo@peazypricing.com?subject=Quick%20Scan" class="btn btn-lemon">Ask for a Quick Scan</a>
+<a href="index.html#calculator" class="btn btn-ghost">Calculate your upside</a>
+</div>
+<p class="alt">or write to <a href="mailto:timo@peazypricing.com">timo@peazypricing.com</a></p>
+</div>
+</section>
+<footer>
+<div class="foot">
+<div class="foot-brand"><img src="peazy-lockup-reversed.svg" alt="Peazy"><p class="hand">pricing made easy</p></div>
+<div><h4>Platform</h4><nav aria-label="Platform"><a href="insights.html">Insights</a><a href="price-management.html">Price management</a><a href="quote.html">Quote</a><a href="value.html">Value</a></nav></div>
+<div><h4>Company</h4><nav aria-label="Company"><a href="index.html#why">Why Peazy</a><a href="index.html#faq">FAQ</a></nav></div>
+<div><h4>Get started</h4><nav aria-label="Get started"><a href="index.html#start">Quick Scan</a><a href="index.html#calculator">Calculate your upside</a><a href="mailto:timo@peazypricing.com">timo@peazypricing.com</a></nav></div>
+<small>© 2026 Peazy. All rights reserved.</small>
+</div>
+</footer>
+</div>
+<script src="site.js"></script>
+</body>
+</html>
