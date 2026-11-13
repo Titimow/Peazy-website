@@ -147,7 +147,7 @@ header{position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);back
 .worth-top .bigstat{flex:none}
 .worth-top .eyebrow{color:var(--ink)}
 .bigstat{font-size:clamp(52px,6.4vw,84px);line-height:0.95;font-weight:700;letter-spacing:-0.03em;color:var(--ink)}
-.bigstat small{display:block;font-size:20px;letter-spacing:0;font-weight:600;margin-top:10px}
+.bigstat small{display:block;font-size:17px;line-height:1.35;letter-spacing:0;font-weight:600;margin-top:10px}
 .stat{display:flex;flex-direction:column;gap:8px;padding:24px;border-radius:14px;background:var(--cream);box-shadow:0 8px 18px rgba(35,25,74,.14);color:var(--ink)}
 .stat strong{font-size:clamp(28px,3vw,38px);line-height:1.1;font-weight:700}
 .stat b{font-size:17px}
